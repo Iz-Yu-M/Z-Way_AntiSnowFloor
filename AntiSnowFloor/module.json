@@ -1,1 +1,64 @@
-
+{
+	"singleton": false,
+	"dependencies": [],
+	"category": "device_enhancements",
+	"author": "OOO 'DAS' Izotov Yury",
+	"homepage": "http://www.das-ooo.ru/",
+	"icon": "icon.png",
+	"moduleName": "AntiSnowFloor",
+	"version": "0.0.1",
+	"maturity": "beta",
+	"repository": {
+		"type": "git",
+		"source": "https://github.com/Iz-Yu-M/home-automation"
+	},
+	"defaults": {
+		"title": "__m_title__",
+		"description": "__m_descr__",
+		"correctionValue": 0,
+		"device": "",
+		"hide":true
+	},
+	"schema": {
+		"type": "object",
+		"properties": {
+			"controlPanel": {
+				"field": "enum",
+				"datasource": "namespaces",
+				"enum": "namespaces:devices_sensorMultilevel:deviceId",
+				"required": true
+			},
+			"rainTrigger": {
+				"field": "enum",
+				"datasource": "namespaces",
+				"enum": "namespaces:devices_sensorBinary:deviceId",
+				"required": true
+			},
+			"hide": {
+				"type": "boolean",
+				"required": true
+			}
+		},
+		"required": true
+	},
+	"options": {
+		"fields": {
+			"controlPanel": {
+				"label": "__l_ctrlpnl__",
+				"datasource": "namespaces",
+				"field": "optionLabels",
+				"optionLabels": "namespaces:devices_sensorMultilevel:deviceName"
+			},
+			"rainTrigger": {
+				"label": "__l_rain__",
+				"datasource": "namespaces",
+				"field": "optionLabels",
+				"optionLabels": "namespaces:devices_sensorBinary:deviceName"
+			},
+			"hide": {
+				"type": "checkbox",
+				"rightLabel": "__rl_hide_original__"
+			}
+		}
+	}
+}
