@@ -1,0 +1,8 @@
+{
+	"m_title":"AntiSnow",
+	"m_descr":"Turn on heating floor",
+	"l_ctrlpnl":"Heating control panel",
+	"l_rain":"Rain trigger",
+	"h_correctionValue":"As example, +4 or -3",
+	"rl_hide_original":"Hide original sensor"
+}
